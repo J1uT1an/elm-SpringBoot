@@ -31,6 +31,6 @@ public class BusinessController {
 	
 	@RequestMapping("/getBusinessById")
 	public Business getBusinessById(Business business) throws Exception {
-		return businessService.getBusinessById(business.getOrderTypeId());
+		return businessService.getBusinessById(business.getBusinessId());
 	}
 }
