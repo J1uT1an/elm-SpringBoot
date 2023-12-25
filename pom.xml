@@ -26,6 +26,13 @@
             <groupId>org.mybatis.spring.boot</groupId>
             <artifactId>mybatis-spring-boot-starter</artifactId>
             <version>2.3.2</version>
+            <!--
+                <version>3.0.2</version>
+                报错：java.lang.IllegalArgumentException:
+                Unable to instantiate org.mybatis.spring.boot.autoconfigure.MybatisDependsOnDatabaseInitializationDetector [org.springframework.boot.sql.init.dependency.DependsOnDatabaseInitializationDetector]
+                解决：检查pom文件之后发现我在依赖中使用 MyBatis Spring Boot Starter 的版本是 3.0.2，但 Spring Boot 的版本是 2.7.6，
+                我去查了2.7.6版本对应的Mybatis Spring Boot Stater的版本号是2.3.x，去官网重新复制一下就好了
+            -->
         </dependency>
         <dependency>
             <groupId>mysql</groupId>
