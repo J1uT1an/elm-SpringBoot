@@ -20,7 +20,6 @@ import java.util.List;
 @RestController
 @RequestMapping("/BusinessController")
 public class BusinessController {
-	
 	@Autowired
 	private BusinessService businessService;
 	
