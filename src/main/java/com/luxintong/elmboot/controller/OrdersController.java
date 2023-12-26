@@ -26,4 +26,8 @@ public class OrdersController {
 		return orderService.createOrders(orders);
 	}
 	
+	@RequestMapping("/getOrdersById")
+	public Orders getOrdersById(Orders orders) throws Exception {
+		return orderService.getOrdersById(orders.getOrderId());
+	}
 }

@@ -65,4 +65,9 @@ public class OrdersServiceImpl implements OrdersService {
 		// 返回生成的订单 id
 		return orderId;
 	}
+	
+	@Override
+	public Orders getOrdersById(Integer orderId) {
+		return ordersMapper.getOrdersById(orderId);
+	}
 }

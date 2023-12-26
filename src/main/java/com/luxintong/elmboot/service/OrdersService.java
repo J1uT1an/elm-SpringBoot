@@ -17,4 +17,10 @@ public interface OrdersService {
 	 * @return
 	 */
 	public int createOrders(Orders orders);
+	
+	/**
+	 * @param orderId
+	 * @return
+	 */
+	public Orders getOrdersById(Integer orderId);
 }

@@ -21,4 +21,10 @@ public interface OrderDetailetMapper {
 	 * @return
 	 */
 	public int saveOrderDetailetBatch(List<OrderDetailet> list); // 注解在 src/main/resources/mapper/OrderDetailetMapper.xml 里
+	
+	/**
+	 * @param order
+	 * @return
+	 */
+	public List<OrderDetailet> listOrderDetailetByOrderId(Integer order); // 注解在 src/main/resources/mapper/OrderDetailetMapper.xml 里
 }

@@ -19,9 +19,15 @@ public interface OrdersMapper {
 	/**
 	 * @param orders
 	 * @return
-	 * @description 插入orderDate 在 src/main/java/com/luxintong/elmboot/service/impl/OrdersServiceImpl.java 里插入
+	 * @description 插入 orderDate 在 src/main/java/com/luxintong/elmboot/service/impl/OrdersServiceImpl.java 里插入
 	 */
 	@Insert("insert into orders(userId, businessId, orderDate, orderTotal, daId, orderState) values (#{userId},#{businessId},#{orderDate},#{orderTotal},#{daId},0)")
 	@Options(useGeneratedKeys = true, keyProperty = "orderId", keyColumn = "orderId")
 	public int saveOrders(Orders orders);
+	
+	/**
+	 * @param orderId
+	 * @return
+	 */
+	public Orders getOrdersById(Integer orderId); // 注解在 src/main/resources/mapper/OrdersMapper.xml 里
 }
