@@ -70,4 +70,9 @@ public class OrdersServiceImpl implements OrdersService {
 	public Orders getOrdersById(Integer orderId) {
 		return ordersMapper.getOrdersById(orderId);
 	}
+	
+	@Override
+	public List<Orders> listOrdersByUserId(String userId) {
+		return ordersMapper.listOrdersByUserId(userId);
+	}
 }

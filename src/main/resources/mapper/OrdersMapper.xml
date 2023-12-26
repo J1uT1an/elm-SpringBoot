@@ -24,4 +24,11 @@
         from orders
         where orderId = #{orderId}
     </select>
+
+    <select id="listOrdersByUserId" parameterType="String" resultMap="ordersResultMap">
+        select *
+        from orders
+        where userId = #{userId}
+        order by userId
+    </select>
 </mapper>

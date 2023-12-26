@@ -2,6 +2,8 @@ package com.luxintong.elmboot.service;
 
 import com.luxintong.elmboot.po.Orders;
 
+import java.util.List;
+
 /**
  * @projectName: <h3>elmboot</h3>
  * @package: com.luxintong.elmboot.service
@@ -23,4 +25,10 @@ public interface OrdersService {
 	 * @return
 	 */
 	public Orders getOrdersById(Integer orderId);
+	
+	/**
+	 * @param userId
+	 * @return
+	 */
+	public List<Orders> listOrdersByUserId(String userId);
 }

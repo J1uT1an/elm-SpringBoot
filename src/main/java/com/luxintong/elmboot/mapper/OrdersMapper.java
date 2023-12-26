@@ -5,6 +5,8 @@ import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Options;
 
+import java.util.List;
+
 /**
  * @projectName: <h3>elmboot</h3>
  * @package: com.luxintong.elmboot.mapper
@@ -30,4 +32,10 @@ public interface OrdersMapper {
 	 * @return
 	 */
 	public Orders getOrdersById(Integer orderId); // 注解在 src/main/resources/mapper/OrdersMapper.xml 里
+	
+	/**
+	 * @param userId
+	 * @return
+	 */
+	public List<Orders> listOrdersByUserId(String userId); // 注解在 src/main/resources/mapper/OrdersMapper.xml 里
 }

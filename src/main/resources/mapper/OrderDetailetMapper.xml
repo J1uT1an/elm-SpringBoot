@@ -18,6 +18,7 @@
         <association property="food" javaType="Food"
                      select="com.luxintong.elmboot.mapper.FoodMapper.getFoodById" column="foodId"/>
     </resultMap>
+
     <select id="listOrderDetailetByOrderId" parameterType="Integer" resultMap="orderDetailetResultMap">
         select *
         from orderdetailet

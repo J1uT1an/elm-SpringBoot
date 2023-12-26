@@ -6,6 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
+
 /**
  * @projectName: <h3>elmboot</h3>
  * @package: com.luxintong.elmboot.mapper
@@ -29,5 +31,10 @@ public class OrdersController {
 	@RequestMapping("/getOrdersById")
 	public Orders getOrdersById(Orders orders) throws Exception {
 		return orderService.getOrdersById(orders.getOrderId());
+	}
+	
+	@RequestMapping("/listOrdersByUserId")
+	public List<Orders> listOrdersByUserId(Orders orders) throws Exception {
+		return orderService.listOrdersByUserId(orders.getUserId());
 	}
 }
