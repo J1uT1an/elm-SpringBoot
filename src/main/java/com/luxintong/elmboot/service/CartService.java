@@ -31,4 +31,10 @@ public interface CartService {
 	 * @return
 	 */
 	public int updateCart(Cart cart);
+	
+	/**
+	 * @param cart
+	 * @return
+	 */
+	public int removeCart(Cart cart);
 }

@@ -22,7 +22,7 @@ public interface CartMapper {
 	 * @param cart
 	 * @return
 	 */
-	public List<Cart> listCart(Cart cart);
+	public List<Cart> listCart(Cart cart); // 注解在 src/main/resources/mapper/CartMapper.xml 里
 	
 	/**
 	 * @param cart
@@ -37,4 +37,10 @@ public interface CartMapper {
 	 */
 	@Update("update cart set quantity = #{quantity} where foodId = #{foodId} and businessId = #{businessId} and userId = #{userId}")
 	public int updateCart(Cart cart);
+	
+	/**
+	 * @param cart
+	 * @return
+	 */
+	public int removeCart(Cart cart); // 注解在 src/main/resources/mapper/CartMapper.xml 里
 }
