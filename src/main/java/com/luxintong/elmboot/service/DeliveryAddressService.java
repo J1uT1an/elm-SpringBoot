@@ -19,4 +19,28 @@ public interface DeliveryAddressService {
 	 * @return
 	 */
 	public List<DeliveryAddress> listDeliveryAddressByUserId(String userId);
+	
+	/**
+	 * @param daId
+	 * @return
+	 */
+	public DeliveryAddress getDeliveryAddressById(Integer daId);
+	
+	/**
+	 * @param deliveryAddress
+	 * @return
+	 */
+	public int saveDeliveryAddress(DeliveryAddress deliveryAddress);
+	
+	/**
+	 * @param deliveryAddress
+	 * @return
+	 */
+	public int updateDeliveryAddress(DeliveryAddress deliveryAddress);
+	
+	/**
+	 * @param daId
+	 * @return
+	 */
+	public int removeDeliveryAddress(Integer daId);
 }
