@@ -28,4 +28,8 @@ public class CartController {
 		return cartService.listCart(cart);
 	}
 	
+	@RequestMapping("/saveCart")
+	public int saveCart(Cart cart) throws Exception {
+		return cartService.saveCart(cart);
+	}
 }

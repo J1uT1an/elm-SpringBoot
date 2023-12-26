@@ -26,4 +26,9 @@ public class CartServiceImpl implements CartService {
 	public List<Cart> listCart(Cart cart) {
 		return cartMapper.listCart(cart);
 	}
+	
+	@Override
+	public int saveCart(Cart cart) {
+		return cartMapper.saveCart(cart);
+	}
 }

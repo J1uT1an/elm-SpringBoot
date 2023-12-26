@@ -1,6 +1,7 @@
 package com.luxintong.elmboot.mapper;
 
 import com.luxintong.elmboot.po.Cart;
+import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;
@@ -21,4 +22,11 @@ public interface CartMapper {
 	 * @return
 	 */
 	public List<Cart> listCart(Cart cart);
+	
+	/**
+	 * @param cart
+	 * @return
+	 */
+	@Insert("insert into cart values(null, #{foodId}, #{businessId}, #{userId}, 1)")
+	public int saveCart(Cart cart);
 }

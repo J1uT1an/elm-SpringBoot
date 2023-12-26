@@ -19,4 +19,10 @@ public interface CartService {
 	 * @return
 	 */
 	public List<Cart> listCart(Cart cart);
+	
+	/**
+	 * @param cart
+	 * @return
+	 */
+	public int saveCart(Cart cart);
 }
