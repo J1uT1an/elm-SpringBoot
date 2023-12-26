@@ -10,14 +10,19 @@ package com.luxintong.elmboot.po;
  * @version: 1.0
  */
 public class Business {
-	
 	private Integer businessId;
 	private String businessName;
 	private String businessAddress;
 	private String businessExplain;
 	private String businessImg;
 	private Integer orderTypeId;
+	/**
+	 * 起送费
+	 */
 	private Double starPrice;
+	/**
+	 * 配送费
+	 */
 	private Double deliveryPrice;
 	private String remarks;
 	
