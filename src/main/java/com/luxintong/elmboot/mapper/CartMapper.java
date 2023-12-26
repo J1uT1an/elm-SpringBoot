@@ -3,6 +3,7 @@ package com.luxintong.elmboot.mapper;
 import com.luxintong.elmboot.po.Cart;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Update;
 
 import java.util.List;
 
@@ -29,4 +30,11 @@ public interface CartMapper {
 	 */
 	@Insert("insert into cart values(null, #{foodId}, #{businessId}, #{userId}, 1)")
 	public int saveCart(Cart cart);
+	
+	/**
+	 * @param cart
+	 * @return
+	 */
+	@Update("update cart set quantity = #{quantity} where foodId = #{foodId} and businessId = #{businessId} and userId = #{userId}")
+	public int updateCart(Cart cart);
 }

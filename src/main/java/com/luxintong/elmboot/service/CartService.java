@@ -25,4 +25,10 @@ public interface CartService {
 	 * @return
 	 */
 	public int saveCart(Cart cart);
+	
+	/**
+	 * @param cart
+	 * @return
+	 */
+	public int updateCart(Cart cart);
 }

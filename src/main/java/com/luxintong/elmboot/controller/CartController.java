@@ -32,4 +32,9 @@ public class CartController {
 	public int saveCart(Cart cart) throws Exception {
 		return cartService.saveCart(cart);
 	}
+	
+	@RequestMapping("/updateCart")
+	public int updateCart(Cart cart) throws Exception {
+		return cartService.updateCart(cart);
+	}
 }
