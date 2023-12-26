@@ -21,4 +21,12 @@ public interface UserMapper {
 	 */
 	@Select("select * from user where userId = #{userId} and password=#{password};")
 	public User getUserByIdByPass(User user);
+	
+	/**
+	 * @param userId
+	 * @return
+	 * @description 聚合函数查询行数
+	 */
+	@Select("select COUNT(*) from user where userId = #{userId};")
+	public int getUserById(String userId);
 }

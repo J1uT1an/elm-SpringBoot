@@ -17,4 +17,11 @@ public interface UserService {
 	 * @return
 	 */
 	public User getUserByIdByPass(User user);
+	
+	/**
+	 * @param userId
+	 * @return
+	 * @description 聚合函数查询行数
+	 */
+	public int getUserById(String userId);
 }
