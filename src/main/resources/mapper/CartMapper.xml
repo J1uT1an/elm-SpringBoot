@@ -12,7 +12,6 @@
                      select="com.luxintong.elmboot.mapper.FoodMapper.getFoodById" column="foodId"/>
         <association property="business" javaType="Business"
                      select="com.luxintong.elmboot.mapper.BusinessMapper.getBusinessById" column="businessId"/>
-
     </resultMap>
 
     <select id="listCart" parameterType="Cart" resultMap="cartResultMap">
