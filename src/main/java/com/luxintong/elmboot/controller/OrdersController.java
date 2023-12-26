@@ -1,4 +1,4 @@
-package com.luxintong.elmboot.mapper;
+package com.luxintong.elmboot.controller;
 
 import com.luxintong.elmboot.po.Orders;
 import com.luxintong.elmboot.service.OrdersService;
