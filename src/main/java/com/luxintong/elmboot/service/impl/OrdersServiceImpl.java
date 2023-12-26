@@ -10,6 +10,7 @@ import com.luxintong.elmboot.service.OrdersService;
 import com.luxintong.elmboot.util.CommonUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -33,6 +34,7 @@ public class OrdersServiceImpl implements OrdersService {
 	private OrderDetailetMapper orderDetailetMapper;
 	
 	@Override
+	@Transactional
 	public int createOrders(Orders orders) {
 		// 1.查询当前用户购物车中当前商家的所有食品
 		Cart cart = new Cart();
