@@ -17,7 +17,6 @@ import org.springframework.stereotype.Service;
  */
 @Service
 public class UserServiceImpl implements UserService {
-	
 	@Autowired
 	private UserMapper userMapper;
 	
@@ -29,5 +28,10 @@ public class UserServiceImpl implements UserService {
 	@Override
 	public int getUserById(String userId) {
 		return userMapper.getUserById(userId);
+	}
+	
+	@Override
+	public int saveUser(User user) {
+		return userMapper.saveUser(user);
 	}
 }

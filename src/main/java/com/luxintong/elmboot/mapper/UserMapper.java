@@ -1,6 +1,7 @@
 package com.luxintong.elmboot.mapper;
 
 import com.luxintong.elmboot.po.User;
+import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
 
@@ -29,4 +30,11 @@ public interface UserMapper {
 	 */
 	@Select("select COUNT(*) from user where userId = #{userId};")
 	public int getUserById(String userId);
+	
+	/**
+	 * @param user
+	 * @return
+	 */
+	@Insert("insert into user values (#{userId}, #{password}, #{userName}, #{userSex}, null, 1)")
+	public int saveUser(User user);
 }

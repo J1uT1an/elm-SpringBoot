@@ -24,4 +24,10 @@ public interface UserService {
 	 * @description 聚合函数查询行数
 	 */
 	public int getUserById(String userId);
+	
+	/**
+	 * @param user
+	 * @return
+	 */
+	public int saveUser(User user);
 }
